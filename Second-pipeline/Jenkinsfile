@@ -4,7 +4,12 @@ pipeline {
         stage('build') {
             steps {
                 git 'https://github.com/gopinathPersonal/sampleJavaProject.git'
-                sh 'mvn package'
+                sh 'javac HelloWorldTest.java'
+            }
+        }
+        stage('Run') {
+            steps {
+                sh 'java HelloWorldTest'
             }
         }
         stage('Test') {
