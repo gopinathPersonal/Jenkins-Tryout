@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 git 'https://github.com/gopinathPersonal/sampleJavaProject.git'
+                sh 'mvn clean install'
                 sh 'javac HelloWorldTest.java'
             }
         }
