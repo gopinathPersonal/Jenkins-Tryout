@@ -11,12 +11,12 @@ pipeline {
             steps {
                 git 'https://github.com/gopinathPersonal/sampleJavaProject.git'
                 sh 'mvn clean package'
-                sh 'javac HelloWorldTest.java'
+                
             }
         }
         stage('Run') {
             steps {
-                sh 'java HelloWorldTest'
+                echo 'Running'
             }
         }
         stage('Test') {
