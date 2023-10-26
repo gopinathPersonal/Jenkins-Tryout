@@ -1,12 +1,14 @@
 pipeline {
     agent any
+  tools {
+    maven 'maven-3.6.3' 
+  }
 
-    
     stages {
         stage('build') {
             steps {
                 git 'https://github.com/gopinathPersonal/sampleJavaProject.git'
-                sh 'mvn package'
+                sh 'mvn clean package'
                 sh 'javac HelloWorldTest.java'
             }
         }
