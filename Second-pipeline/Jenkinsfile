@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                git 'https://github.com/gopinathPersonal/java-hello-world-with-maven.git'
+                git 'https://github.com/gopinathPersonal/sampleJavaProject.git'
                 sh 'mvn package'
             }
         }
