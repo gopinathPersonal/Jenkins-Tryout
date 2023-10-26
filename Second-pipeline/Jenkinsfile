@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 git 'https://github.com/gopinathPersonal/sampleJavaProject.git'
-                sh 'mvn package'
+                sh 'mvn clean install'
             }
         }
         stage('Test') {
